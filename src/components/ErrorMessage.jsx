@@ -13,8 +13,8 @@ const ErrorMessage = ({ isError, errorMessage, onClick, ...props }) => {
       {isError && (
         // This component is not structured how it should,
         // But this is done to keep backwards compatibility
-        <h3 data-test="error">
-          <button className="error-button" onClick={onClick}>
+        <h3 data-test="error-text">
+          <button className="error-button" onClick={onClick} data-test="button-close-error" title="error-close-button">
             <FontAwesomeIcon icon={faTimes} />
           </button>
           {errorMessage}

@@ -33,7 +33,7 @@ const InputError = ({
               id: testId,
               name: testId,
             }
-          : {})}
+          : {"data-test": testId ? testId : `input-${type}`})}
         {...props}
       />
       {isError && (

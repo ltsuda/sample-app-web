@@ -82,7 +82,7 @@ function Login(props) {
                   type={INPUT_TYPES.TEXT}
                   value={username}
                   onChange={handleUserChange}
-                  testId="username"
+                  testId="input-username"
                   placeholder="Username"
                   // Custom
                   id="user-name"
@@ -95,7 +95,7 @@ function Login(props) {
                   type={INPUT_TYPES.PASSWORD}
                   value={password}
                   onChange={handlePassChange}
-                  testId="password"
+                  testId="input-password"
                   placeholder="Password"
                   // Custom
                   autoCorrect="off"
@@ -110,7 +110,7 @@ function Login(props) {
                   // `btn_action` has no style function
                   // but is there for backwards compatibility
                   customClass="btn_action"
-                  testId="login-button"
+                  testId="button-login"
                   value="Login"
                 />
               </form>
@@ -121,7 +121,7 @@ function Login(props) {
         </div>
         <div className="login_credentials_wrap">
           <div className="login_credentials_wrap-inner">
-            <div id="login_credentials" className="login_credentials">
+            <div id="login_credentials" className="login_credentials" data-test="section-usernames">
               <h4>Accepted usernames are:</h4>
               standard_user
               <br />
@@ -132,7 +132,7 @@ function Login(props) {
               performance_glitch_user
               <br />
             </div>
-            <div className="login_password">
+            <div className="login_password" data-test="section-password">
               <h4>Password for all users:</h4>
               secret_sauce
             </div>
