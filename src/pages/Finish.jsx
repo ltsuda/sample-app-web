@@ -16,6 +16,7 @@ const Finish = ({ history }) => {
         <div
           id="checkout_complete_container"
           className="checkout_complete_container"
+          data-test="checkout-complete-container"
         >
           <h2 className="complete-header" data-test="header-complete">THANK YOU FOR YOUR ORDER</h2>
           <div className="complete-text" data-test="header-description">
