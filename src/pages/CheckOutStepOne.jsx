@@ -67,7 +67,7 @@ const CheckOutStepOne = ({ history }) => {
                   type={INPUT_TYPES.TEXT}
                   value={firstName}
                   onChange={handleFirstNameChange}
-                  testId="firstName"
+                  testId="input-first-name"
                   placeholder="First Name"
                   // Custom
                   id="first-name"
@@ -79,7 +79,7 @@ const CheckOutStepOne = ({ history }) => {
                   type={INPUT_TYPES.TEXT}
                   value={lastName}
                   onChange={handleLastNameChange}
-                  testId="lastName"
+                  testId="input-last-name"
                   placeholder="Last Name"
                   // Custom
                   id="last-name"
@@ -91,7 +91,7 @@ const CheckOutStepOne = ({ history }) => {
                   type={INPUT_TYPES.TEXT}
                   value={postalCode}
                   onChange={handlePostalCodeChange}
-                  testId="postalCode"
+                  testId="input-postal-code"
                   placeholder="Zip/Postal Code"
                   // Custom
                   id="postal-code"
@@ -115,12 +115,12 @@ const CheckOutStepOne = ({ history }) => {
                     history.push(ROUTES.CART);
                   }}
                   size={BUTTON_SIZES.MEDIUM}
-                  testId="cancel"
+                  testId="button-cancel"
                   type={BUTTON_TYPES.BACK}
                 />
                 <SubmitButton
                   customClass="btn btn_primary cart_button btn_action"
-                  testId="continue"
+                  testId="button-continue"
                   value="Continue"
                 />
               </div>
