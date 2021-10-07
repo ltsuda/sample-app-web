@@ -40,10 +40,11 @@ const DrawerMenu = ({ history }) => {
           evt.preventDefault();
           history.push(ROUTES.INVENTORY);
         }}
+        data-test="link-all-items"
       >
         All Items
       </a>
-      <a id="about_sidebar_link" className="menu-item" href={aboutLink}>
+      <a id="about_sidebar_link" className="menu-item" href={aboutLink} data-test="link-about">
         About
       </a>
       <a
@@ -55,6 +56,7 @@ const DrawerMenu = ({ history }) => {
           removeCredentials();
           history.push(ROUTES.LOGIN);
         }}
+        data-test="link-logout"
       >
         Logout
       </a>
@@ -66,6 +68,7 @@ const DrawerMenu = ({ history }) => {
           evt.preventDefault();
           resetStorage();
         }}
+        data-test="link-reset-state"
       >
         Reset App State
       </a>

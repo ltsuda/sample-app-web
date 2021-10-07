@@ -5,7 +5,7 @@ import "./Select.css";
 const Select = ({ activeOption, onChange, options, testId }) => {
   return (
     <span className="select_container">
-      <span className="active_option">
+      <span className="active_option" data-test="select-active-option">
         {
           options[options.findIndex((option) => option.key === activeOption)]
             .value
@@ -20,9 +20,10 @@ const Select = ({ activeOption, onChange, options, testId }) => {
               "data-test": testId,
             }
           : {})}
+        title="product_sort_container"
       >
         {options.map(({ key, value }) => (
-          <option value={key} key={key}>
+          <option value={key} key={key} data-test={`option-${key}`}>
             {value}
           </option>
         ))}

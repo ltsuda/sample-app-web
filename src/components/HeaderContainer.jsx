@@ -50,13 +50,13 @@ const HeaderContainer = ({
    * and functions
    */
   /* istanbul ignore next */
-  const Title = ({ title }) => <span className="title">{title}</span>;
+  const Title = ({ title }) => <span className="title" data-test="title">{title}</span>;
   const extraClass = customClass ? ` ${customClass}` : "";
 
   return (
     <div id="header_container" className={`header_container${extraClass}`}>
-      <div className="primary_header">
-        <div id="menu_button_container">
+      <div className="primary_header" data-test="header-primary">
+        <div id="menu_button_container" data-test="menu-drawer">
           <DrawerMenu />
         </div>
         <div className="header_label">
@@ -66,7 +66,7 @@ const HeaderContainer = ({
           <CartButton />
         </div>
       </div>
-      <div className="header_secondary_container">
+      <div className="header_secondary_container" data-test="header-secondary">
         {secondaryLeftComponent && (
           <LeftComponent leftComponent={secondaryLeftComponent} />
         )}
