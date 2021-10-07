@@ -110,7 +110,7 @@ const InventoryListItem = (props) => {
               evt.preventDefault();
               history.push(itemLink);
             }}
-            data-test={`link-title-item-${id}`}
+            data-test={`link-name-item-${id}`}
           >
             <div className="inventory_item_name" data-test="item-name">{name}</div>
           </a>

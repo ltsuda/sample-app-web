@@ -105,7 +105,6 @@ const InventoryItem = (props) => {
     const label = itemInCart ? "Remove" : "Add to cart";
     const onClick = itemInCart ? () => removeFromCart(id) : () => addToCart(id);
     const type = itemInCart ? BUTTON_TYPES.SECONDARY : BUTTON_TYPES.PRIMARY;
-    const testId = `${label}-${item}`.replace(/\s+/g, "-").toLowerCase();
 
     return (
       <Button
@@ -113,7 +112,7 @@ const InventoryItem = (props) => {
         label={label}
         onClick={onClick}
         size={BUTTON_SIZES.SMALL}
-        testId={testId}
+        testId="button-add-to-cart"
         type={type}
       />
     );
@@ -130,7 +129,7 @@ const InventoryItem = (props) => {
               label="Back to products"
               onClick={goBack}
               type={BUTTON_TYPES.BACK}
-              testId="back-to-products"
+              testId="button-back-to-products"
             />
           }
         />
@@ -142,16 +141,17 @@ const InventoryItem = (props) => {
                   alt={item.name}
                   className="inventory_details_img"
                   src={require(`../assets/img/${item.image_url}`).default}
+                  data-test={`img-${item.name}`}
                 />
               </div>
               <div className="inventory_details_desc_container">
-                <div className="inventory_details_name large_size">
+                <div className="inventory_details_name large_size" data-test="item-name">
                   {item.name}
                 </div>
-                <div className="inventory_details_desc large_size">
+                <div className="inventory_details_desc large_size" data-test="item-description">
                   {item.desc}
                 </div>
-                <div className="inventory_details_price">${item.price}</div>
+                <div className="inventory_details_price" data-test="item-price">${item.price}</div>
                 <ButtonType
                   id={item.id}
                   itemInCart={itemInCart}
