@@ -40,6 +40,7 @@ const CheckOutStepTwo = ({ history }) => {
         <div
           id="checkout_summary_container"
           className="checkout_summary_container"
+          data-test="checkout-summary-container"
         >
           <div>
             <div className="cart_list" data-test="list-cart">
