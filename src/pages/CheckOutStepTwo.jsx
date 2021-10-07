@@ -42,25 +42,25 @@ const CheckOutStepTwo = ({ history }) => {
           className="checkout_summary_container"
         >
           <div>
-            <div className="cart_list">
-              <div className="cart_quantity_label">QTY</div>
-              <div className="cart_desc_label">DESCRIPTION</div>
+            <div className="cart_list" data-test="list-cart">
+              <div className="cart_quantity_label" data-test="cart-qty">QTY</div>
+              <div className="cart_desc_label" data-test="cart-description">DESCRIPTION</div>
               {contents.map((item, i) => {
                 return <CartItem key={i} item={InventoryData[item]} />;
               })}
             </div>
             <div className="summary_info">
-              <div className="summary_info_label">Payment Information:</div>
-              <div className="summary_value_label">SauceCard #31337</div>
-              <div className="summary_info_label">Shipping Information:</div>
-              <div className="summary_value_label">
+              <div className="summary_info_label" data-test="label-payment-information">Payment Information:</div>
+              <div className="summary_value_label" data-test="value-payment-information">SauceCard #31337</div>
+              <div className="summary_info_label" data-test="label-shipping-information">Shipping Information:</div>
+              <div className="summary_value_label" data-test="value-shipping-information">
                 FREE PONY EXPRESS DELIVERY!
               </div>
-              <div className="summary_subtotal_label">
+              <div className="summary_subtotal_label" data-test="label-subtotal">
                 Item total: ${orderTotal}
               </div>
-              <div className="summary_tax_label">Tax: ${orderTax}</div>
-              <div className="summary_total_label">
+              <div className="summary_tax_label" data-test="label-tax">Tax: ${orderTax}</div>
+              <div className="summary_total_label" data-test="label-total">
                 Total: ${(orderTotal + parseFloat(orderTax)).toFixed(2)}
               </div>
               <div className="cart_footer">
@@ -74,7 +74,7 @@ const CheckOutStepTwo = ({ history }) => {
                     history.push(ROUTES.INVENTORY);
                   }}
                   size={BUTTON_SIZES.MEDIUM}
-                  testId="cancel"
+                  testId="button-cancel"
                   type={BUTTON_TYPES.BACK}
                 />
                 <Button
@@ -86,7 +86,7 @@ const CheckOutStepTwo = ({ history }) => {
                     history.push(ROUTES.CHECKOUT_COMPLETE);
                   }}
                   size={BUTTON_SIZES.MEDIUM}
-                  testId="finish"
+                  testId="button-finish"
                   type={BUTTON_TYPES.ACTION}
                 />
               </div>
