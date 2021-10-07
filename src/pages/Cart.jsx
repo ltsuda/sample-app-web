@@ -18,9 +18,9 @@ const Cart = ({ history }) => {
         <HeaderContainer secondaryTitle="Your Cart" />
         <div id="cart_contents_container" className="cart_contents_container">
           <div>
-            <div className="cart_list">
-              <div className="cart_quantity_label">QTY</div>
-              <div className="cart_desc_label">DESCRIPTION</div>
+            <div className="cart_list" data-test="list-cart">
+              <div className="cart_quantity_label" data-test="cart-qty">QTY</div>
+              <div className="cart_desc_label" data-test="cart-description">DESCRIPTION</div>
               {contents.map((item, i) => (
                 <CartItem key={i} item={InventoryData[item]} showButton />
               ))}
@@ -33,7 +33,7 @@ const Cart = ({ history }) => {
                   history.push(ROUTES.INVENTORY);
                 }}
                 size={BUTTON_SIZES.MEDIUM}
-                testId="continue-shopping"
+                testId="button-continue-shopping"
                 type={BUTTON_TYPES.BACK}
               />
               <Button
@@ -46,7 +46,7 @@ const Cart = ({ history }) => {
                   history.push(ROUTES.CHECKOUT_STEP_ONE);
                 }}
                 size={BUTTON_SIZES.MEDIUM}
-                testId="checkout"
+                testId="button-checkout"
                 type={BUTTON_TYPES.ACTION}
               />
             </div>

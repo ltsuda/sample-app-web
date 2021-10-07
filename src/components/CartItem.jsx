@@ -31,8 +31,8 @@ const CartItem = ({ item, history, showButton }) => {
     const itemLink = `${ROUTES.INVENTORY_LIST}?id=${linkId}`;
 
     return (
-      <div className="cart_item">
-        <div className="cart_quantity">1</div>
+      <div className="cart_item" data-test="item-cart">
+        <div className="cart_quantity" data-test="item-quantity">1</div>
         <div className="cart_item_label">
           <a
             href="#"
@@ -41,17 +41,18 @@ const CartItem = ({ item, history, showButton }) => {
               evt.preventDefault();
               history.push(itemLink);
             }}
+            data-test={`link-name-item-${id}`}
           >
-            <div className="inventory_item_name">{name}</div>
+            <div className="inventory_item_name" data-test="item-name">{name}</div>
           </a>
-          <div className="inventory_item_desc">{desc}</div>
+          <div className="inventory_item_desc" data-test="item-description">{desc}</div>
           <div className="item_pricebar">
-            <div className="inventory_item_price">${price}</div>
+            <div className="inventory_item_price" data-test="item-price">${price}</div>
             {showButton && (
               <Button
                 customClass="cart_button"
                 label="Remove"
-                testId={`remove-${name.replace(/\s+/g, "-").toLowerCase()}`}
+                testId={`button-remove-${name.replace(/\s+/g, "-").toLowerCase()}`}
                 onClick={() => removeFromCart(id)}
                 size={BUTTON_SIZES.SMALL}
                 type={BUTTON_TYPES.SECONDARY}
@@ -63,7 +64,7 @@ const CartItem = ({ item, history, showButton }) => {
     );
   }
 
-  return <div className="removed_cart_item" />;
+  return <div className="removed_cart_item" data-test="item-empty-cart"/>;
 };
 CartItem.propTypes = {
   /**
