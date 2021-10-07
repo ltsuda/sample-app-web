@@ -16,7 +16,7 @@ const Cart = ({ history }) => {
     <div id="page_wrapper" className="page_wrapper">
       <div id="contents_wrapper">
         <HeaderContainer secondaryTitle="Your Cart" />
-        <div id="cart_contents_container" className="cart_contents_container">
+        <div id="cart_contents_container" className="cart_contents_container" data-test="cart-container">
           <div>
             <div className="cart_list" data-test="list-cart">
               <div className="cart_quantity_label" data-test="cart-qty">QTY</div>
