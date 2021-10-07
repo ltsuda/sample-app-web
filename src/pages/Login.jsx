@@ -72,7 +72,7 @@ function Login(props) {
     <div>
       <div className="login_logo" />
 
-      <div className="login_wrapper">
+      <div className="login_wrapper" data-test="login-container">
         <div className="login_wrapper-inner">
           <div id="login_button_container" className="form_column">
             <div className="login-box">
@@ -119,7 +119,7 @@ function Login(props) {
 
           <div className="bot_column" />
         </div>
-        <div className="login_credentials_wrap">
+        <div className="login_credentials_wrap" data-test="login-credentials-container">
           <div className="login_credentials_wrap-inner">
             <div id="login_credentials" className="login_credentials" data-test="section-usernames">
               <h4>Accepted usernames are:</h4>
