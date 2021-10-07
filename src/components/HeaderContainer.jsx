@@ -54,7 +54,7 @@ const HeaderContainer = ({
   const extraClass = customClass ? ` ${customClass}` : "";
 
   return (
-    <div id="header_container" className={`header_container${extraClass}`}>
+    <div id="header_container" className={`header_container${extraClass}`} data-test="header-container">
       <div className="primary_header" data-test="header-primary">
         <div id="menu_button_container" data-test="menu-drawer">
           <DrawerMenu />

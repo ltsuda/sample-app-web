@@ -23,7 +23,7 @@ const Select = ({ activeOption, onChange, options, testId }) => {
         title="product_sort_container"
       >
         {options.map(({ key, value }) => (
-          <option value={key} key={key} data-test={`option-${key}`}>
+          <option value={key} key={key}>
             {value}
           </option>
         ))}
