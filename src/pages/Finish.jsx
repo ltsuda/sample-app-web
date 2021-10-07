@@ -17,17 +17,17 @@ const Finish = ({ history }) => {
           id="checkout_complete_container"
           className="checkout_complete_container"
         >
-          <h2 className="complete-header">THANK YOU FOR YOUR ORDER</h2>
-          <div className="complete-text">
+          <h2 className="complete-header" data-test="header-complete">THANK YOU FOR YOUR ORDER</h2>
+          <div className="complete-text" data-test="header-description">
             Your order has been dispatched, and will arrive just as fast as the
             pony can get there!
           </div>
-          <img alt="Pony Express" className="pony_express" src={PonyExpress} />
+          <img alt="Pony Express" className="pony_express" src={PonyExpress} data-test="img-pony-express"/>
           <Button
             label="Back Home"
             onClick={() => history.push(ROUTES.INVENTORY)}
             size={BUTTON_SIZES.SMALL}
-            testId="back-to-products"
+            testId="button-back-to-products"
           />
         </div>
       </div>
