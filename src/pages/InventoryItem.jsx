@@ -105,6 +105,7 @@ const InventoryItem = (props) => {
     const label = itemInCart ? "Remove" : "Add to cart";
     const onClick = itemInCart ? () => removeFromCart(id) : () => addToCart(id);
     const type = itemInCart ? BUTTON_TYPES.SECONDARY : BUTTON_TYPES.PRIMARY;
+    const testId = label === "Remove" ? "button-remove" : "button-add-to-cart"
 
     return (
       <Button
@@ -112,7 +113,7 @@ const InventoryItem = (props) => {
         label={label}
         onClick={onClick}
         size={BUTTON_SIZES.SMALL}
-        testId="button-add-to-cart"
+        testId={testId}
         type={type}
       />
     );
