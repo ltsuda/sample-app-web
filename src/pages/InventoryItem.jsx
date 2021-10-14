@@ -134,9 +134,9 @@ const InventoryItem = (props) => {
             />
           }
         />
-        <div id="inventory_item_container" className="inventory_item_container">
+        <div id="inventory_item_container" className="inventory_item_container" data-test="inventory-details-container">
           <div className="inventory_details">
-            <div className="inventory_details_container" data-test="inventory-details-container">
+            <div className="inventory_details_container" data-test="inventory-item">
               <div className="inventory_details_img_container">
                 <img
                   alt={item.name}

@@ -31,7 +31,7 @@ const CartItem = ({ item, history, showButton }) => {
     const itemLink = `${ROUTES.INVENTORY_LIST}?id=${linkId}`;
 
     return (
-      <div className="cart_item" data-test="item-cart">
+      <div className="cart_item" data-test="inventory-item">
         <div className="cart_quantity" data-test="item-quantity">1</div>
         <div className="cart_item_label">
           <a
